@@ -8,7 +8,7 @@ import CaretDoubleDownIcon from "/public/images/CaretDoubleDown.svg";
  */
 function CaretDoubleDown() {
   const handleScrollDown = () => {
-    const scrollAmount = 1280;
+    const scrollAmount = 780;
 
     window.scrollBy({
       top: scrollAmount,
