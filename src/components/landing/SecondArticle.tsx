@@ -13,7 +13,10 @@ import CaretDoubleDown from "./head-article/CaretDoubleDown";
  */
 function SecondArticle() {
   return (
-    <article className="flex h-[1280px] min-w-[1920px] items-center justify-center overflow-hidden bg-primary-50">
+    <article
+      id="SecondArticle"
+      className="flex h-[1280px] min-w-[1920px] items-center justify-center overflow-hidden bg-primary-50"
+    >
       <div
         id="target-section"
         className="relative flex h-[1280px] w-[1920px] gap-[350px] px-48 py-14 text-left"
@@ -38,14 +41,14 @@ function SecondArticle() {
           </div>
         </div>
         <div className="absolute bottom-28 left-[1000px]">
-          <CaretDoubleDown />
+          <CaretDoubleDown targetId="ThirdArticle" />
         </div>
         <div className="absolute left-[1920px] top-0 z-10 h-full w-[700px] bg-primary-50" />
         <div className="absolute left-[1200px] top-[400px] z-10 h-[382px] w-[360px] rounded-lg bg-white px-[95px] py-[93px] shadow-2xl shadow-primary-300">
           <Image src={bug} alt="bugDecoIcon" width={190} height={196} />
         </div>
         <Image
-          className="animate-rotateLeft absolute left-[1250px] top-0"
+          className="absolute left-[1250px] top-0 animate-rotateLeft"
           src={circleOfSquaresIcon}
           alt="bugDecoIcon"
           width={1270}
