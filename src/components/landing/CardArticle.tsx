@@ -10,9 +10,12 @@ import CaretDoubleDownWhite from "./head-article/CaretDoubleDownWhite";
  */
 function CardArticle() {
   return (
-    <section className="relative z-10 h-[1280px] overflow-hidden bg-primary-500 pt-36">
+    <section
+      id="CardArticle"
+      className="relative z-10 h-[1280px] overflow-hidden bg-primary-500 pt-36"
+    >
       <div className="absolute bottom-[100px] left-1/2">
-        <CaretDoubleDownWhite />
+        <CaretDoubleDownWhite targetId="ServiceArticle" />
       </div>
       <div className="relative top-[-80px] flex h-[1025px] flex-col items-center justify-center gap-[121px]">
         <h2 className="text-center text-6xl font-bold leading-[80px] text-white">

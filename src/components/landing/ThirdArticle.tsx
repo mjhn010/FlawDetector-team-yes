@@ -12,7 +12,10 @@ import CaretDoubleDown from "./head-article/CaretDoubleDown";
  */
 function ThirdArticle() {
   return (
-    <div className="relative z-0 flex h-[1280px] min-w-[1880px] items-center justify-center gap-[88px] overflow-hidden">
+    <div
+      id="ThirdArticle"
+      className="relative z-0 flex h-[1280px] min-w-[1880px] items-center justify-center gap-[88px] overflow-hidden"
+    >
       <Image
         src={CheckingImg}
         alt="Checking"
@@ -20,10 +23,10 @@ function ThirdArticle() {
         height={977}
         className="relative top-[400px]"
       />
-      <div className="absolute bottom-[350px] left-[1500px]">
-        <CaretDoubleDown />
-      </div>
-      <div className="flex h-[280px] flex-col items-end justify-center gap-[34px]">
+      <div className="relative flex h-[280px] flex-col items-end justify-center gap-[34px]">
+        <div className="absolute bottom-[-200px] left-[235px]">
+          <CaretDoubleDown targetId="CardArticle" />
+        </div>
         <h2 className="text-right text-6xl font-bold leading-[80px] text-primary-500">
           최신 보안 동향을
           <br />

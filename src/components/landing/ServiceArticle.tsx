@@ -27,7 +27,10 @@ const ContactInfo = ({ label, value }: ContactInfo) => (
  */
 function ServiceArticle() {
   return (
-    <article className="flex h-[1280px] min-w-[1880px] items-center justify-center">
+    <article
+      id="ServiceArticle"
+      className="flex h-[1280px] min-w-[1880px] items-center justify-center"
+    >
       <div className="flex h-[817px] items-center justify-start gap-[124px]">
         <div className="flex h-[808px] flex-col items-start justify-between">
           <div className="flex flex-col gap-[30px] text-left">

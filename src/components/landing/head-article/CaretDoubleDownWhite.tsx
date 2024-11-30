@@ -6,15 +6,19 @@ import CaretDoubleDownIcon from "/public/images/caretdoubledown-white.svg";
  *
  * @returns {JSX.Element} 스크롤을 유도하는 버튼을 렌더링하는 JSX 요소를 반환합니다.
  */
-function CaretDoubleDownWhite() {
+function CaretDoubleDownWhite({ targetId }: { targetId: string }) {
   const handleScrollDown = () => {
-    const scrollAmount = 1280;
+    const target = document.querySelector(`#${targetId}`);
 
-    window.scrollBy({
-      top: scrollAmount,
-      left: 0,
-      behavior: "smooth", // 부드러운 스크롤
-    });
+    if (target instanceof HTMLElement) {
+      const targetPosition = target.offsetTop;
+      const offset = 72.35; // 고정 헤더만큼 이동
+
+      window.scrollTo({
+        top: targetPosition - offset,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (

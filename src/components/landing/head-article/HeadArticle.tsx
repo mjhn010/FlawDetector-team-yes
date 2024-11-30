@@ -20,7 +20,7 @@ function HeadArticle() {
         src={MainBackground}
         alt="Main Background"
         fill
-        className="animate-fadeIn -z-20 object-cover"
+        className="-z-20 animate-fadeIn object-cover"
       />
       <div className="flex h-[509px] flex-col items-center justify-center gap-[65px]">
         <div className="flex flex-col items-center justify-center gap-5">
@@ -38,7 +38,7 @@ function HeadArticle() {
           </div>
         </div>
         <LoginButton />
-        <CaretDoubleDown />
+        <CaretDoubleDown targetId="SecondArticle" />
       </div>
     </article>
   );
