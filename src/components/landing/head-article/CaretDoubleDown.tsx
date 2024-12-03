@@ -12,11 +12,10 @@ function CaretDoubleDown({ targetId }: { targetId: string }) {
 
     if (target instanceof HTMLElement) {
       const targetPosition = target.offsetTop;
-      const offset = 72.35; // 고정 헤더만큼 이동
       console.log(targetPosition);
 
       window.scrollTo({
-        top: (targetPosition - offset) * 0.72,
+        top: targetPosition * 0.671,
         behavior: "smooth",
       });
     }
