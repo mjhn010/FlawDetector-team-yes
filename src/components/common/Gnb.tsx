@@ -4,12 +4,15 @@ import bug from "/public/images/bug.svg";
 import { logout } from "@/server/user.action";
 import { getSession } from "@/lib/getSession";
 
+type GnbProps = {
+  session: any;
+};
 /**
  * @TODO 로그인 처리
  * @TODO 글꼴 폰트 적용 및 공용색상 사용으로 변경하기
  */
-async function Gnb() {
-  const session = await getSession();
+function Gnb({ session }: GnbProps) {
+  // const session = await getSession();
 
   return (
     <>
