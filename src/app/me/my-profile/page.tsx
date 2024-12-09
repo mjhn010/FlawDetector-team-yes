@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { SessionProvider } from "next-auth/react";
 import { Metadata } from "next";
+import { getSession } from "@/lib/getSession";
 
 export const metadata: Metadata = {
   title: "My Profile",
 };
-function MyProfile() {
+async function MyProfile() {
+  const session = await getSession();
   return (
     <>
       <div>
@@ -28,7 +30,7 @@ function MyProfile() {
             </Link>
           </div>
           <SessionProvider>
-            <ProfileInfo />
+            <ProfileInfo isSession={session} />
           </SessionProvider>
         </div>
       </div>
