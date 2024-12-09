@@ -8,6 +8,10 @@ import db from "@/firebase/firebaseClient";
 import { Session } from "next-auth";
 import { fetchGitHubUserInfo } from "@/lib/api/github/fetchUserInfo";
 
+type LoginSession = {
+  session: any;
+};
+
 /**
  * 사용자가 Firestore 데이터베이스에 등록되어 있는지 확인하고, 등록되지 않은 경우 새로 등록합니다.
  * 프로필 이미지 URL에서 사용자 번호를 추출하고, 가능할 경우 추가적인 GitHub 사용자 정보를 가져옵니다.
@@ -49,12 +53,10 @@ async function registerUserIfNeeded(session: Session) {
  *
  * @returns {JSX.Element} GitHub 로그인 버튼을 렌더링하는 JSX 요소입니다.
  */
-async function GithubLogin() {
-  const session = await getSession();
-
+function GithubLogin({ session }: LoginSession) {
   if (session !== null) {
     // Firestore에 사용자 등록 여부 확인
-    await registerUserIfNeeded(session);
+    registerUserIfNeeded(session);
     redirect("/");
   }
 

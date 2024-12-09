@@ -91,7 +91,7 @@ export default async function RootLayout({
     <html lang="ko" className={pretendard.variable}>
       <body className={`relative`}>
         <NextTopLoader color="#6100ff" />
-        <Gnb />
+        <Gnb session={session} />
         <SessionProvider session={session}>
           <ModalProvider />
         </SessionProvider>
