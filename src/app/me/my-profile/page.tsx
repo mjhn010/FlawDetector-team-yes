@@ -9,8 +9,7 @@ import { getSession } from "@/lib/getSession";
 export const metadata: Metadata = {
   title: "My Profile",
 };
-async function MyProfile() {
-  const session = await getSession();
+function MyProfile() {
   return (
     <>
       <div>
@@ -30,7 +29,7 @@ async function MyProfile() {
             </Link>
           </div>
           <SessionProvider>
-            <ProfileInfo isSession={session} />
+            <ProfileInfo />
           </SessionProvider>
         </div>
       </div>

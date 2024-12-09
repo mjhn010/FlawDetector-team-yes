@@ -24,7 +24,7 @@ async function MyPage() {
             </div>
           </div>
           <SessionProvider session={session}>
-            <ProfileInfo isSession={session} />
+            <ProfileInfo />
           </SessionProvider>
           <GitRepoList />
         </div>
