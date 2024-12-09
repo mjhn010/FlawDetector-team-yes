@@ -5,10 +5,12 @@ import Link from "next/link";
 import ToggleSwitch from "@/components/me/ToggleSwitch";
 import { SessionProvider } from "next-auth/react";
 import { Metadata } from "next";
+import { getSession } from "@/lib/getSession";
 export const metadata: Metadata = {
   title: "Setting",
 };
-export default function SettingPage() {
+export default async function SettingPage() {
+  const session = await getSession();
   return (
     <>
       <div>
@@ -28,7 +30,7 @@ export default function SettingPage() {
             </Link>
           </div>
           <SessionProvider>
-            <ProfileInfo />
+            <ProfileInfo isSession={session} />
           </SessionProvider>
           <div className="flex w-full justify-between border-b-2 pb-[40px]">
             <div className="flex h-[103px] flex-col justify-between py-[50px]">
