@@ -13,7 +13,6 @@ export async function POST(req: Request) {
     const result = await model.generateContent(prompt);
     const resultAI = result.response.text();
     return NextResponse.json(resultAI);
-    return NextResponse.json(result);
   } catch (error) {
     console.log(error);
   }
